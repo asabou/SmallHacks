@@ -24,6 +24,8 @@ def downloadVideo(urls):
         os.system("youtube-dl --restrict-filenames --no-playlist " + url)
 
 def setEnv():
+    os.system("if exist media rmdir media /q /s")
+    os.system("mkdir media")
     os.chdir("./media")
 
 def start():
